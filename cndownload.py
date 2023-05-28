@@ -16,9 +16,9 @@ parser = argparse.ArgumentParser(
 parser.add_argument('-o', '--output', default='study_files',
                     help='output dir to save files')
 parser.add_argument('semesters', nargs='+', type=int,
-                    choices=[1, 2, 3, 4, 5, 6, 7, 8])
+                    choices=[1, 2, 3, 4, 5, 6, 7, 8], help='semesters to download files for')
 parser.add_argument('-e', '--exclude',
-                    choices=['books', 'pastpapers', 'notes'], action='store', nargs="*")
+                    choices=['books', 'pastpapers', 'notes'], action='store', nargs="*", help='files to exclude from downloading')
 
 args = parser.parse_args()
 output_dir = args.output
